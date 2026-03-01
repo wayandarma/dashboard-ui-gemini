@@ -1,0 +1,56 @@
+/* /src/components/dashboard/audience/AudienceDemographicsChart.css */
+
+.demo-bar-container {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+
+.demo-bar-container:last-child {
+    margin-bottom: 0;
+}
+
+.demo-label {
+    width: 60px;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    flex-shrink: 0;
+}
+
+.demo-track {
+    background-color: var(--color-bg-elevated);
+    height: 8px;
+    border-radius: var(--radius-full);
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.demo-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: var(--radius-full);
+    width: 0%;
+    /* Initial state for animation */
+    transition: width var(--duration-enter) var(--ease-out);
+}
+
+.demo-percent {
+    width: 40px;
+    text-align: right;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+    flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .demo-fill {
+        transition: none;
+    }
+}

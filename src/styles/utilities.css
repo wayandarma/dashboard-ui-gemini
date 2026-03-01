@@ -1,0 +1,50 @@
+/* utilities.css - Helper classes */
+
+/* Stagger Animations */
+.animate-fade-in-up {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fadeInUp var(--duration-enter) var(--ease-out) forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delay classes */
+.delay-0 {
+    animation-delay: 0ms;
+}
+
+.delay-1 {
+    animation-delay: 60ms;
+}
+
+.delay-2 {
+    animation-delay: 120ms;
+}
+
+.delay-3 {
+    animation-delay: 180ms;
+}
+
+.delay-4 {
+    animation-delay: 240ms;
+}
+
+.delay-5 {
+    animation-delay: 300ms;
+}
+
+.delay-6 {
+    animation-delay: 360ms;
+}
+
+.delay-7 {
+    animation-delay: 420ms;
+}
+
+/* Flex & Grid layouts are handled via Tailwind, spacing via Tailwind mapped to tokens */
